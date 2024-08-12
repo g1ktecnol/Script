@@ -8,7 +8,7 @@ echo                   %computername% - %username% - %date% - %time%
 echo                   _______________________________________________________________
 echo                  ^|      [MENU]                                                   ^| 
 echo                  ^|                                                               ^|
-echo                  ^|      [1] ATIVAR WINDOWS 10/11 ENTERPRISE                      ^|
+echo                  ^|      [1] ATIVAR WINDOWS 10/11                                 ^|
 echo                  ^|                                                               ^|
 echo                  ^|      [2] DESINTALAR APPS NAO UTILIZADOS                       ^|
 echo                  ^|                                                               ^|
