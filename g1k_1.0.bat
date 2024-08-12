@@ -41,7 +41,7 @@ if "%OPCAO%" == "8" goto op8
 if "%OPCAO%" == "9" goto op9
 if "%OPCAO%" == "0" goto op0
 
-#==================================================================================================
+#==== ATIVADOR WINDOWS ======================================================
 :op1
 slmgr /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43
 slmgr /skms kms8.msguides.com
@@ -52,7 +52,7 @@ pause > nul
 cls
 goto MENU
 
-#=====================================================================================
+#======= WINGET UNINSTALL  ==================================================
 :op2
 @echo #================ DESINSTALANDO SOFTWARES NAO NESCESSSARIOS ==================#
 powercfg -h off
@@ -109,7 +109,7 @@ pause > nul
 cls
 goto MENU
 
-#====================================================================================
+#============ WINGET INSTALL  ====================================================
 :op3
 winget install rarlab.winrar
 winget install Google.Chrome --silent
@@ -138,7 +138,7 @@ echo "PRESSIONE QUALQUER TECLA PARA VOLTAR AO MENU"
 pause > nul
 cls
 goto MENU
-#=================== INSTALR ONLYOFFICE ===================================================================
+#=================== INSTALAR ONLYOFFICE ===================================================================
 :op5
 winget install ONLYOFFICE.DesktopEditors
 echo.
@@ -177,7 +177,7 @@ pause > nul
 cls
 goto MENU
 
-#======= FIM ==================================================================
+#======= FIM ===========================================================
 
 :op0
 exit
