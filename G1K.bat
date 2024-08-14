@@ -63,16 +63,15 @@ del C:\setup.exe
 del C:\basic.xml
 cls
 echo.
-msg */ #= OFFICE INSTALADO COM SUCESSO!!!=#
+msg */ # OFFICE INSTALADO COM SUCESSO!!! #
 goto menu
 
 :4
-@echo #============= INSTALANDO, AGUARDE!!! ================#
+@echo #============ INSTALANDO, AGUARDE!!! ================#
 winget install ONLYOFFICE.DesktopEditors --silent
 msg */ INSTALACAO EXECUTADA COM SUCESSO!
 cls
 goto menu
-
 
 :5 
 set /p NewName="Digite o novo nome para o computador: "
@@ -91,10 +90,10 @@ start Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle
 goto menu  
 
 :7
-@echo #========== INSTALANDO APPS, AGUARDE!!! =============
+@echo #========== INSTALANDO APPS, AGUARDE!!! =============#
 winget install rarlab.winrar --silent
 winget install Google.Chrome --silent
-msg */ INSTALACAO EXECUTADA COM SUCESSO! 
+msg */ INSTALACAO EXECUTADA COM SUCESSO!!! 
 goto menu  
 
 :8
@@ -149,14 +148,12 @@ winget uninstall MSIX\Microsoft.PowerAutomateDesktop_1.0.1234.0_x64__8wekyb3d8bb
 winget uninstall MSIX\Microsoft.GamingApp_2407.1001.1.0_x64__8wekyb3d8bbwe
 winget uninstall MSIX\Microsoft.OutlookForWindows_1.2024.717.400_x64__8wekyb3d8bbwe
 winget uninstall Microsoft.DevHome
-msg */ #===OPERACAO EXECUTADA COM SUCESSO!===#
+msg */ # OPERACAO EXECUTADA COM SUCESSO!!!! #
 goto menu
-
 
 :9
 start curl ascii.live/forrest
 goto menu
-
 
 :0
 exit
