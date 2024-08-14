@@ -2,7 +2,7 @@
 :menu
 cls
 color 09
-title [SCRIPT G1K-TECNOLOGIA] 
+title [SCRIPT G1K-TECNOLOGIA]
 echo Data=%date%  Hora=%time%                   
 echo Computador=%computername% 
 echo Usuario=%username%                  
@@ -46,7 +46,7 @@ goto menu
 net user Administrador /active:yes >nul
 echo Usuario Administrador Ativado! defina uma "SENHA"
 net user Administrador *
-msg */ #= Usuario Administrador ativado com sucesso!!!=#
+msg */ # Usuario Administrador ativado com sucesso!!! #
 goto menu 
 
 :3
