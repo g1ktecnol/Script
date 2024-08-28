@@ -84,7 +84,7 @@ goto menu
 :6
 @echo #============== BAIXANDO WINGET, AGUARDE!!! =================#
 bitsadmin /transfer Winget /priority foreground https://github.com/microsoft/winget-cli/releases/download/v1.8.1911/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle C:\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle
-cd /
+cd/
 start Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle
 @echo #============= INSTALANDO WINGET, AGUARDE!!! ================# 
 goto menu  
