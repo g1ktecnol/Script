@@ -63,7 +63,7 @@ del C:\setup.exe
 del C:\basic.xml
 cls
 echo.
-msg */ # OFFICE INSTALADO COM SUCESSO!!! #
+msg */ # OFFICE LTSC INSTALADO COM SUCESSO!!! #
 goto menu
 
 :4
@@ -78,7 +78,7 @@ mklink "C:\Users\%username%\Desktop\Excel" "C:\Program Files\Microsoft Office 15
 del C:\setup.exe
 cls
 echo.
-msg */ # OFFICE INSTALADO COM SUCESSO!!! #
+msg */ # OFFICE 2013 INSTALADO COM SUCESSO!!! #
 PowerShell
 irm https://massgrave.dev/get | iex
 cls
