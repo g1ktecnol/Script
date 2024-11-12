@@ -25,7 +25,7 @@ echo                  ^|      [7] INSTALAR APPS MAIS UTILIZADOS                 
 echo                  ^|                                                               ^|
 echo                  ^|      [8] REMOVER APPS NAO UTILIZADOS                          ^|
 echo                  ^|                                                               ^|
-echo                  ^|      [9] LINK ATIVAÇÃO OFFICE 2013                            ^|
+echo                  ^|      [9] LINK ATIVACAO OFFICE 2013                            ^|
 echo                  ^|                                                               ^|
 echo                  ^|      [0] SAIR                                                 ^|   
 echo                  ^|_______________________________________________________________^|
@@ -157,7 +157,7 @@ msg */ # OPERACAO EXECUTADA COM SUCESSO!!!! #
 goto menu
 
 :9
-msg */ # Executar link no powershell= irm https://massgrave.dev/get | iex #
+msg */ # irm https://massgrave.dev/get | iex #
 goto menu
 
 :0
