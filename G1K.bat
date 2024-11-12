@@ -79,8 +79,7 @@ del C:\setup.exe
 cls
 echo.
 msg */ # OFFICE 2013 INSTALADO COM SUCESSO!!! #
-PowerShell
-irm https://massgrave.dev/get | iex
+msg */ # Executar link no powershell= irm https://massgrave.dev/get | iex #
 cls
 goto menu
 
