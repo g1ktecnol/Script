@@ -157,10 +157,10 @@ msg */ # OPERACAO EXECUTADA COM SUCESSO!!!! #
 goto menu
 
 :9
-@echo ##### LINK ATIVACAO OFFICE 2013 #######
-@echo #######################################
-@echo # irm https://massgrave.dev/get | iex #
-@echo #######################################
+@echo ##### LINK ATIVACAO OFFICE 2013 ##########
+@echo ##########################################
+@echo # irm https://massgrave.dev/get pipe iex #
+@echo ##########################################
 pause
 goto menu
 
