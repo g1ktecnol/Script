@@ -68,9 +68,9 @@ goto menu
 
 :4
 @echo #============== BAIXANDO OFFICE 2013, AGUARDE!!! =================#
-bitsadmin /transfer Office /priority foreground https://github.com/g1ktecnol/office2013/releases/download/office2013v1.0/Office2013.exe C:\office2013.exe
+bitsadmin /transfer Office /priority foreground https://github.com/g1ktecnol/office2013/releases/download/v1.0/Setup.exe C:\setup.exe
 cd /
-start office2013.exe
+start setup.exe
 @echo #============= INSTALANDO OFFICE 2013, AGUARDE!!! ================#
 pause
 mklink "C:\Users\%username%\Desktop\Word" "C:\Program Files\Microsoft Office 15\root\office15\WINWORD.EXE" 
