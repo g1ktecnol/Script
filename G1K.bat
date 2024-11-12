@@ -13,9 +13,9 @@ echo                  ^|      [1] ATIVAR WINDOWS 10/11 ENTERPRISE               
 echo                  ^|                                                               ^|
 echo                  ^|      [2] ATIVAR ADMINISTRADOR  [DIGITAR SENHA]                ^|
 echo                  ^|                                                               ^|
-echo                  ^|      [3] INSTALAR MICROSOT OFFICE LTSC                        ^|
+echo                  ^|      [3] INSTALAR MICROSOFT OFFICE LTSC (LOGIN)               ^|
 echo                  ^|                                                               ^|
-echo                  ^|      [4] INSTALAR ONLY-OFFICE                                 ^|
+echo                  ^|      [4] INSTALAR MICROSOFT OFFICE 2013                       ^|
 echo                  ^|                                                               ^|
 echo                  ^|      [5] ALTERAR NOME DO COMPUTADOR                           ^|
 echo                  ^|                                                               ^|
@@ -55,7 +55,7 @@ bitsadmin /transfer Office /priority foreground https://github.com/g1ktecnol/off
 bitsadmin /transfer Office /priority foreground https://github.com/g1ktecnol/office/releases/download/VS1.0/basic.xml C:\basic.xml
 cd /
 setup /configure basic.xml
-@echo #============= INSTALANDO OFFICE, AGUARDE!!! ================#
+@echo #============= INSTALANDO OFFICE LTSC, AGUARDE!!! ================#
 pause
 mklink "C:\Users\%username%\Desktop\Word" "C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE" 
 mklink "C:\Users\%username%\Desktop\Excel" "C:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE"
@@ -67,9 +67,20 @@ msg */ # OFFICE INSTALADO COM SUCESSO!!! #
 goto menu
 
 :4
-@echo #============ INSTALANDO, AGUARDE!!! ================#
-winget install ONLYOFFICE.DesktopEditors --silent
-msg */ INSTALACAO EXECUTADA COM SUCESSO!
+@echo #============== BAIXANDO OFFICE 2013, AGUARDE!!! =================#
+bitsadmin /transfer Office /priority foreground https://github.com/g1ktecnol/office2013/blob/main/Office2013.exe C:\office2013.exe
+cd /
+setup office2013.exe
+@echo #============= INSTALANDO OFFICE 2013, AGUARDE!!! ================#
+pause
+mklink "C:\Users\%username%\Desktop\Word" "C:\Program Files\Microsoft Office 15\root\office15\WINWORD.EXE" 
+mklink "C:\Users\%username%\Desktop\Excel" "C:\Program Files\Microsoft Office 15\root\Office15\EXCEL.EXE"
+del C:\setup.exe
+cls
+echo.
+msg */ # OFFICE INSTALADO COM SUCESSO!!! #
+PowerShell
+irm https://massgrave.dev/get | iex
 cls
 goto menu
 
@@ -106,14 +117,12 @@ winget uninstall Microsoft.Getstarted_8wekyb3d8bbwe
 winget uninstall Microsoft.MicrosoftOfficeHub_8wekyb3d8bbwe
 winget uninstall Microsoft.MicrosoftSolitaireCollection_8wekyb3d8bbwe
 winget uninstall Microsoft.MixedReality.Portal_8wekyb3d8bbwe
-winget uninstall Microsoft.Office.OneNote_8wekyb3d8bbwe
 winget uninstall Microsoft.People_8wekyb3d8bbwe
 winget uninstall Microsoft.SkypeApp_kzf8qxf38zg5c
 winget uninstall Microsoft.Wallet_8wekyb3d8bbwe
 winget uninstall Microsoft.WindowsCamera_8wekyb3d8bbwe
 winget uninstall Microsoft.WindowsFeedbackHub_8wekyb3d8bbwe
 winget uninstall Microsoft.WindowsMaps_8wekyb3d8bbwe
-winget uninstall Microsoft.WindowsSoundRecorder_8wekyb3d8bbwe
 winget uninstall Microsoft.Xbox.TCUI_8wekyb3d8bbwe
 winget uninstall Microsoft.XboxApp_8wekyb3d8bbwe
 winget uninstall Microsoft.XboxGameOverlay_8wekyb3d8bbwe
@@ -129,13 +138,11 @@ winget uninstall Microsoft.WebpImageExtension_8wekyb3d8bbwe
 winget uninstall Microsoft.HEIFImageExtension_8wekyb3d8bbwe
 winget uninstall Microsoft.Microsoft3DViewer_8wekyb3d8bbwe
 winget uninstall Microsoft.WebMediaExtensions_8wekyb3d8bbwe
-winget uninstall Microsoft.VP9VideoExtensions_8wekyb3d8bbwe
 winget uninstall Microsoft.WindowsAlarms_8wekyb3d8bbwe
 winget uninstall Microsoft.MSPaint_8wekyb3d8bbwe
 winget uninstall Microsoft.ScreenSketch_8wekyb3d8bbwe
 winget uninstall Microsoft.OneConnect_8wekyb3d8bbwe
 winget uninstall Microsoft.Todos_8wekyb3d8bbwe
-winget uninstall Microsoft.OneDrive
 winget uninstall Disney.37853FC22B2CE_6rarf9sa4v8jt
 winget uninstall {2403B2D2-1FDC-497D-B181-F53D079FEAAA} 
 winget uninstall {89581302-705F-42C5-99B0-E368A845DAD5}
