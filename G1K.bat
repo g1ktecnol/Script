@@ -25,7 +25,7 @@ echo                  ^|      [7] INSTALAR APPS MAIS UTILIZADOS                 
 echo                  ^|                                                               ^|
 echo                  ^|      [8] REMOVER APPS NAO UTILIZADOS                          ^|
 echo                  ^|                                                               ^|
-echo                  ^|      [9] corra                                                ^|
+echo                  ^|      [9] LINK ATIVAÇÃO OFFICE 2013                            ^|
 echo                  ^|                                                               ^|
 echo                  ^|      [0] SAIR                                                 ^|   
 echo                  ^|_______________________________________________________________^|
@@ -78,10 +78,7 @@ mklink "C:\Users\%username%\Desktop\Excel" "C:\Program Files\Microsoft Office 15
 del C:\setup.exe
 cls
 echo.
-msg */ # OFFICE 2013 INSTALADO COM SUCESSO!!! #
-cls
-echo.
-msg */ # Executar link no powershell= irm https://massgrave.dev/get | iex #
+msg */ # OFFICE 2013 INSTALADO COM SUCESSO!!! 
 cls
 goto menu
 
@@ -160,7 +157,7 @@ msg */ # OPERACAO EXECUTADA COM SUCESSO!!!! #
 goto menu
 
 :9
-start curl ascii.live/forrest
+msg */ # Executar link no powershell= irm https://massgrave.dev/get | iex #
 goto menu
 
 :0
