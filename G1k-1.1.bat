@@ -16,7 +16,7 @@ echo ║  [2] Pacote Office                                 ║
 echo ║  [3] Winget Aplicativos                            ║
 echo ║  [4] Pos Formatacao                                ║
 echo ║  [5] Performance                                   ║
-echo ║  [6] Verificar Erros                               ║
+echo ║  [6] Verificador de  Erros                         ║
 echo ║  [7] Menu 7                                        ║
 echo ║  [8] Menu 8                                        ║
 echo ║  [9] Sobre Windows                                 ║
