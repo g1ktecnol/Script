@@ -9,18 +9,18 @@ echo Data=%date%  Hora=%time%
 echo Computador=%computername% 
 echo Usuario=%username%
 echo ╔════════════════════════════════════════════════════╗
-echo ║ ✨              MENU PRINCIPAL                  ✨ ║
+echo ║               MENU PRINCIPAL                       ║
 echo ╠════════════════════════════════════════════════════╣
-echo ║  [1] 🔑 Ativar Windows                             ║
-echo ║  [2] 🚀 Pacote Office                              ║
-echo ║  [3] ⚙️ Winget Aplicativos                         ║
-echo ║  [4] 📂 Pos Formatacao                             ║
-echo ║  [5] 🌟 Performance                                ║
-echo ║  [6] 📊 Verificar Erros                            ║
-echo ║  [7] 🧩 Menu 7                                     ║
-echo ║  [8] 💡 Menu 8                                      ║
-echo ║  [9] 🩺 Sobre Windows                              ║
-echo ║  [0] ❌ Sair                                       ║
+echo ║  [1] Ativar Windows                                ║
+echo ║  [2] Pacote Office                                 ║
+echo ║  [3] Winget Aplicativos                            ║
+echo ║  [4] Pos Formatacao                                ║
+echo ║  [5] Performance                                   ║
+echo ║  [6] Verificar Erros                               ║
+echo ║  [7] Menu 7                                        ║
+echo ║  [8] Menu 8                                        ║
+echo ║  [9] Sobre Windows                                 ║
+echo ║  [0] Sair                                          ║
 echo ╚════════════════════════════════════════════════════╝
 choice /c 1234567890 /n /m "👉 Escolha uma opcao:"
 
@@ -39,7 +39,7 @@ goto main_menu
 :menu1
 cls
 echo ╔══════════════════════════════════════════╗
-echo ║ ✨      🔒 Ativação Windows 🔓        ✨ ║
+echo ║           Ativação Windows               ║
 echo ╠══════════════════════════════════════════╣
 echo ║ 1. ➡️ Ativar Windows 10/11 Enterprise    ║
 echo ║ 2. ➡️ Ativar Windows Server STD 2019     ║
@@ -91,11 +91,11 @@ goto menu1
 :menu2
 cls
 echo ╔═════════════════════════════╗
-echo ║ ✨    Instalar office 📎  ✨ ║
+echo ║      Instalar office        ║
 echo ╠═════════════════════════════╣
 echo ║ 1. ➡️ Instalar Office Ltsc  ║
 echo ║ 2. ➡️ Instalar Office 2013  ║
-echo ║ 3. ➡️ Ativar office  🔑     ║
+echo ║ 3. ➡️ Ativar office         ║
 echo ║ 4. 🔙 Voltar                ║
 echo ║ 0. ❌ Sair                  ║
 echo ╚═════════════════════════════╝
@@ -120,7 +120,7 @@ del C:\setup.exe
 del C:\basic.xml
 cls
 echo.
-@echo ✔️ OFFICE LTSC INSTALADO COM SUCESSO !!! #
+@echo  OFFICE LTSC INSTALADO COM SUCESSO !!! #
 timeout /t 3 > null
 goto menu2
 :2
@@ -135,7 +135,7 @@ mklink "C:\Users\%username%\Desktop\Excel" "C:\Program Files\Microsoft Office 15
 del C:\setup.exe
 cls
 echo.
-@echo ✔️ OFFICE 2013 INSTALADO COM SUCESSO!!! 
+@echo  OFFICE 2013 INSTALADO COM SUCESSO!!! 
 timeout /t 3 > null
 cls
 goto menu2
@@ -151,7 +151,7 @@ goto menu2
 :menu3
 cls
 echo ╔═════════════════════════════╗
-echo ║ ✨    Winget  APPS       ✨ ║
+echo ║        Winget  APPS         ║
 echo ╠═════════════════════════════╣
 echo ║ 1. ➡️ Winget Habilitar      ║
 echo ║ 2. ➡️ Winget APPS Instalar  ║
@@ -173,7 +173,7 @@ goto main_menu
 @echo ⌛ Ativando Winget, AGUARDE!!!
 @echo off 
 PowerShell -Command "Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe"
-@echo ✔️ WINGET ATIVADO!!!
+@echo WINGET ATIVADO!!!
 timeout /t 5 > null
 goto menu3
 
@@ -243,7 +243,7 @@ goto menu3
 :menu4
 cls
 echo ╔═══════════════════════════╗
-echo ║ ✨   POS formatacao    ✨ ║
+echo ║       POS formatacao      ║
 echo ╠═══════════════════════════╣
 echo ║ 1. ➡️ Ativar Administrador║
 echo ║ 2. ➡️ Alterar Nome PC     ║
@@ -277,7 +277,7 @@ goto menu4
 :menu5
 cls
 echo ╔═══════════════════════════╗
-echo ║✨     Performance       ✨║
+echo ║       Performance         ║
 echo ╠═══════════════════════════╣
 echo ║ 1. ➡️ Desativar Hibernacao║
 echo ║ 2. ➡️ Ativar Performance  ║
@@ -295,7 +295,7 @@ goto main_menu
 Powercfg -h off
 powercfg /x -monitor-timeout-ac 0
 powercfg /x -standby-timeout-ac 0
-@echo ✔️ sucesso!!! ✔️
+@echo ✔ sucesso!!!
 timeout /t 3 > null
 goto menu5
 :2
@@ -308,7 +308,7 @@ goto menu5
 :menu6
 cls
 echo ╔═══════════════════════════╗
-echo ║ ✨ Verificar por Erros ✨ ║
+echo ║      Verificar por Erros  ║
 echo ╠═══════════════════════════╣
 echo ║ 1. ➡️ Erros de Disco      ║
 echo ║ 2. ➡️ Erros de Update     ║
@@ -338,7 +338,7 @@ goto menu6
 @echo ⏳ Reparando Windows Update!!!
 DISM.exe /Online /Cleanup-image /Checkhealth
 DISM.exe /Online /Cleanup-image /Restorehealth
-@echo 💯 Reparado !!!
+@echo Reparado !!!
 timeout /t 5 > null
 goto menu6
 :3
@@ -351,7 +351,7 @@ goto menu6
 :menu7
 cls
 echo ╔═══════════════════════════╗
-echo ║ ✨       7             ✨ ║
+echo ║       7                   ║
 echo ╠═══════════════════════════╣
 echo ║ 1. ➡️  Instalar Winget    ║
 echo ║ 2. ➡️  Apps Instalar      ║
@@ -370,7 +370,7 @@ goto main_menu
 :menu8
 cls
 echo ╔═══════════════════════════╗
-echo ║ ✨   Habilitar 24H2    ✨ ║
+echo ║       Habilitar 24H2      ║
 echo ╠═══════════════════════════╣
 echo ║ 1. ➡️ Habilitar 24H2      ║
 echo ║ 2. ➡️                     ║
@@ -397,7 +397,7 @@ goto menu8
 :menu9
 cls
 echo ╔═══════════════════════════╗
-echo ║ ✨    Sobre Windows    ✨ ║
+echo ║        Sobre Windows      ║
 echo ╠═══════════════════════════╣
 echo ║ 1. ➡️ Versao Windows      ║
 echo ║ 2. ➡️ Informacoes         ║
