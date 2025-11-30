@@ -209,23 +209,18 @@ if errorlevel 3 goto 3
 if errorlevel 2 goto 2
 if errorlevel 1 goto 1
 goto main_menu
-
 :1
-@echo ⌛ Ativando Winget, AGUARDE!!!
-@echo off 
-PowerShell -Command "Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe"
-@echo WINGET ATIVADO!!!
+@echo ⌛ Winget, AGUARDE!!!
+start "" "https://apps.microsoft.com/detail/9NBLGGH4NNS1?hl=pt-br&gl=BR&ocid=pdpshare"
 timeout /t 3 > null
 goto menu3
-
 :2
 @echo ⌛ INSTALANDO APPS, AGUARDE!!!
 winget install rarlab.winrar --silent
 winget install Google.Chrome --silent
-winget install 9MZ95KL8MR0L
-winget install 9WZDNCRFJBH4
-WINGET install 9WZDNCRFHVN5
-
+winget install 9MZ95KL8MR0L --accept-package-agreements
+winget install 9WZDNCRFJBH4 --accept-package-agreements
+WINGET install 9WZDNCRFHVN5 --accept-package-agreements
 @echo ✔️ INSTALACAO APPS EXECUTADA COM SUCESSO!!! 
 timeout /t 5 > null
 goto menu3
@@ -497,3 +492,4 @@ start https://github.com/g1ktecnol/Script/releases
 goto menu9
 
 ::################################################################################################################################################################################################# 
+
